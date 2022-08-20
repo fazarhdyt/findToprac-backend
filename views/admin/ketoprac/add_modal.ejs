@@ -1,0 +1,49 @@
+<!-- Modal -->
+<div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Ketoprac</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/ketoprac" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+            <div class="form-group">
+              <label for="name">Ketoprac Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter ketoprac name" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Address</label>
+              <input type="text" class="form-control" name="address" placeholder="Enter address" required>
+            </div>
+            <div class="form-group">
+              <label for="name">City</label>
+              <input type="text" class="form-control" name="city" placeholder="Enter city" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Gmaps</label>
+              <input type="text" class="form-control" name="gmaps" placeholder="Enter gmaps" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Price</label>
+              <input type="number" class="form-control" name="price" placeholder="Enter price" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Description</label>
+              <input type="text" class="form-control" name="description" placeholder="Enter description" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Image</label>
+              <input type="file" class="form-control" name="image" required>
+            </div>
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
