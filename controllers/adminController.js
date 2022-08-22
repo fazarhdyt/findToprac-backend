@@ -1,6 +1,7 @@
 const Ketoprac = require('../models/Ketoprac');
 const Users = require('../models/Users');
 const path = require('path')
+const fs = require('fs-extra')
 
 module.exports = {
   viewSignin: async (req, res) => {
@@ -126,8 +127,8 @@ editKetoprac: async (req, res) => {
           ketoprac.gmaps = gmaps
           ketoprac.price = price
           ketoprac.description = description
-          bank.imageUrl = `images/${req.file.filename}`
-          await bank.save()
+          ketoprac.imageUrl = `images/${req.file.filename}`
+          await ketoprac.save()
           req.flash('alertMessage', 'Success update ketoprac')
           req.flash('alertStatus', 'success')
           res.redirect('/admin/ketoprac')

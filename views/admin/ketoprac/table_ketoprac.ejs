@@ -17,6 +17,7 @@
               <th>Gmaps</th>
               <th>Price</th>
               <th>Description</th>
+              <th>Image</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -28,7 +29,7 @@
                 <td><%= ketoprac[i].address %></td>
                 <td><%= ketoprac[i].city %></td>
                 <td><%= ketoprac[i].gmaps %></td>
-                <td><%= ketoprac[i].price %></td>
+                <td>Rp <%= ketoprac[i].price %></td>
                 <td><%= ketoprac[i].description %></td>
                 <td>
                   <img src="mongodb://localhost:27017/findToprac/<%= ketoprac[i].imageUrl %>" alt="imageUrl" width="70px">
