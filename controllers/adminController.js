@@ -15,7 +15,7 @@ module.exports = {
           title: 'FindToprac | Login'
         });
       } else {
-        res.redirect('/admin/dasboard')
+        res.redirect('/admin/dashboard')
       }
     } catch (error) {
       res.redirect('/admin/signin')
@@ -31,8 +31,9 @@ module.exports = {
             req.flash('alertStatus', 'danger')
             res.redirect('/admin/signin')
         }
-        const isPasswordMatch = await bcrypt.compare(password, user.password)
-        if(!isPasswordMatch){
+        // const isPasswordMatch = await bcrypt.compare(password, user.password)
+        const pass = await Users.findOne({password: password})
+        if(!pass){
             req.flash('alertMessage', 'Password yang ada masukkan tidak cocok!')
             req.flash('alertStatus', 'danger')
             res.redirect('/admin/signin')
