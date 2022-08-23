@@ -2,7 +2,7 @@ const seeder = require('mongoose-seed');
 const mongoose = require('mongoose');
 
 //connect to mongodb
-seeder.connect('mongodb://localhost:27017/findToprac', {
+seeder.connect('mongodb+srv://Fazarhdyt:superadmin@cluster0.ovpzkdk.mongodb.net/db_findtoprac?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

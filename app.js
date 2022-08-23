@@ -9,7 +9,7 @@ const flash = require('connect-flash');
 
 //import mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/findToprac', {
+mongoose.connect('mongodb+srv://Fazarhdyt:superadmin@cluster0.ovpzkdk.mongodb.net/db_findtoprac?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

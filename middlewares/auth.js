@@ -1,6 +1,6 @@
 const isLogin = (req, res, next) => {
   if(req.session.user == null || req.session.user == undefined){
-    req.flash('alertMessage', 'Session telah habis, silahkan login kembali!');
+    req.flash('alertMessage', 'Your session has expired. Please log in again.');
     req.flash('alertStatus', 'danger');
     res.redirect('/admin/signin');
   } else {
